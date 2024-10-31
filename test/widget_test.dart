@@ -152,16 +152,74 @@ void main() {
 
   // Function
   // blok kode yang berisi perintah-perintah
-  int hasilPenjumlahan = penjumlahan(12, 12);
-  hasilPenjumlahan += 2;
-  print(hasilPenjumlahan);
-  pengurangan(25, 21);
+  // int hasilPenjumlahan = penjumlahan(12, 12);
+  // hasilPenjumlahan += 2;
+  // print(hasilPenjumlahan);
+  // pengurangan(25, 21);
+
+  // Asynchronous
+  // pada bahasa Dart, terdapat 2 jenis pengeksekusian kode. kode akan dijalankan secara synchronous (sync)
+  // atau asynchronous (async)
+
+  // contoh synchronous
+  print("Contoh asynchronous");
+  print("A");
+  print("B");
+  print("C");
+
+  // contoh penggunaan asynchronous
+  void cetakB() {
+    Future(() {
+      print("B");
+    });
+  }
+
+  // asynchronous function with duration delay
+  void cetakD() {
+    Future.delayed(Duration(seconds: 5), () {
+      print("D");
+    });
+
+    // ini langsung dicetak karena dianggap perintah dalam ffungsi biasa
+    print("berhasil cetak D");
+  }
+
+  // asynchronous function with await
+  void cetakF() async {
+    await Future.delayed(Duration(seconds: 7), () {
+      print("F");
+    });
+
+    // print ini tidak akan dicetak sebelum await di atas diselesaikan
+    print("finally after 7 sec...");
+  }
+
+  // penggunaan then memerlukan keyword Future<tipe>
+  Future<String> cetakG() async {
+    await Future.delayed(Duration(seconds: 10));
+    print("G");
+    print("lo masih mending 7 detik, lah gw");
+    return "mantap nilainya 100";
+
+    // untuk ditangkap catchError ketika error
+    // throw "Tidak Berhasil cetak G"
+  }
+
+  print("Contoh asynchronous");
+  print("A");
+  cetakB();
+  print("C");
+  cetakD();
+  cetakF();
+  cetakG()
+      .then((data) => print("udah jangan adu nasib, semuanya udah selesai kok, btw $data"))
+      .catchError((err) => print("ERROR NI"));
 }
 
-int penjumlahan(int a, int b) {
-  return a + b;
-}
+// int penjumlahan(int a, int b) {
+//   return a + b;
+// }
 
-void pengurangan(int a, int b) {
-  print(a - b);
-}
+// void pengurangan(int a, int b) {
+//   print(a - b);
+// }
