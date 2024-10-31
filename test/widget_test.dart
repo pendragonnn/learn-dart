@@ -29,7 +29,34 @@
 //   });
 // }
 
+// catatan
+/* 
+  - fungsi main diperlukan untuk pertama kali dijalankan
+  - fungsi dengan tipe void tidak mengembalikan apapun
+*/
+import 'dart:ffi';
+
 void main() {
-  String hai = "PANTEK";
-  print(hai);
+  print("NAMA SAYA JOKO");
+
+  // dart bersifat statically typed
+  // kita perlu mendefinisikan variabel sebelum digunakan
+  var nama = "JOKOWkwk";
+  int angka = 120;
+  print(nama);
+  print(angka);
+
+  // dart bersifat type inference
+  // karakteristik ini dapat membuat suatu variabel akan mengikuti tipe data dari valuenya
+  // hal tersebut tidak berlaku jika variabel sudah diberi tipe data
+  var namaKetua = "Wahyu";
+  var umurKetua = 22;
+  var nilaiKelompok = [90, 100, 100, 80];
+  var namaAnggotaKelompok = ["Joko", "Dimas", "Syahrul", "Arhan"];
+  String namaGuru = "Setiawan";
+
+  // string expressions
+  // kita dapat menggunakan tanda $ untuk menampilkan suatu variabel bertipe apapun ke bentuk string
+  // hal ini disebut sebagai string interpolation
+  print("Halo nama saya adalah $namaKetua sebagai ketua kelompok, saya berumur $umurKetua dan nama guru saya $namaGuru");
 }
