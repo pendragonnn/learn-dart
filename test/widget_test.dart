@@ -114,26 +114,40 @@ void main() {
   // print("motor: ${kendaraan["motor"]}");
 
   // ---
-  // final vs const
-  String name = "Asa Mitaka";
-  name = "Yoru";
+  // // final vs const
+  // String name = "Asa Mitaka";
+  // name = "Yoru";
 
-  // isi dari variabel nama masih bisa diubah
-  print(name);
+  // // isi dari variabel nama masih bisa diubah
+  // print(name);
 
-  // agar isi dari variabel tidak bisa diubah, variabel dibuat dengan keyword final atau const
-  // ketika menggunakan final, variabel bisa dideklarasikan terlebih dahulu sebagai abstraksi
-  final String strongestSocerer;
-  // setelah diberikan value, isi variabel tersebut tidak dapat diubah lagi
-  strongestSocerer = "Sukuna";
-  // strongestSocerer = "Satria Gojo"; // error
-  final name2 = "Denji";
+  // // agar isi dari variabel tidak bisa diubah, variabel dibuat dengan keyword final atau const
+  // // ketika menggunakan final, variabel bisa dideklarasikan terlebih dahulu sebagai abstraksi
+  // final String strongestSocerer;
+  // // setelah diberikan value, isi variabel tersebut tidak dapat diubah lagi
+  // strongestSocerer = "Sukuna";
+  // // strongestSocerer = "Satria Gojo"; // error
+  // final name2 = "Denji";
 
-  // penggunaan constant wajib langsung memberikan value
-  const name3 = "Makima";
+  // // penggunaan constant wajib langsung memberikan value
+  // const name3 = "Makima";
 
-  // name2 = "Pochita"; // error
-  // name3 = "Himeno"; // error
+  // // name2 = "Pochita"; // error
+  // // name3 = "Himeno"; // error
 
-  print(strongestSocerer);
+  // print(strongestSocerer);
+
+  // ---
+  // Comment
+  // komen merupakan kumpulan baris kode yang tidak akan dieksekusi program
+  // contoh komen 1 baris
+  // print("hai hai");
+
+  // contoh komen banyak baris
+  /*
+  Function sum(a, b) {
+    return a + b;
+  }
+  */
+
 }
