@@ -62,54 +62,78 @@ void main() {
   // print("Halo nama saya adalah $namaKetua sebagai ketua kelompok, saya berumur $umurKetua dan nama guru saya $namaGuru");
 
   // ----
-  // Topic 2 - Data Type
-  // String
-  String nama = "JONO";
-  String longName = "jono simanjuntak";
-  print(nama.toLowerCase());
-  print(longName.toUpperCase());
-  print(longName.substring(0, 5));
+  // // Topic 2 - Data Type
+  // // String
+  // String nama = "JONO";
+  // String longName = "jono simanjuntak";
+  // print(nama.toLowerCase());
+  // print(longName.toUpperCase());
+  // print(longName.substring(0, 5));
 
-  // Boolean
-  bool isMale = true;
-  bool isFemale = false;
-  print("$longName is male? $isMale");
+  // // Boolean
+  // bool isMale = true;
+  // bool isFemale = false;
+  // print("$longName is male? $isMale");
 
-  // Number
-  // integer dikhususkan untuk bilangan bulat
-  int age = 25;
-  // num berlaku untuk bilangan bulat dan decimal
-  num weight = 22.1;
-  // double dikhusukan untuk bilangan decimal
-  double height = 175.6;
+  // // Number
+  // // integer dikhususkan untuk bilangan bulat
+  // int age = 25;
+  // // num berlaku untuk bilangan bulat dan decimal
+  // num weight = 22.1;
+  // // double dikhusukan untuk bilangan decimal
+  // double height = 175.6;
 
-  int absolutExample = -100;
-  print(
-      "$longName berumur $age tahun beratnya adalah $weight KG dengan tinggi $height cm, angka yang dipilih adalah ${absolutExample.abs()}");
+  // int absolutExample = -100;
+  // print(
+  //     "$longName berumur $age tahun beratnya adalah $weight KG dengan tinggi $height cm, angka yang dipilih adalah ${absolutExample.abs()}");
 
-  print(age.isEven);
-  print(absolutExample.abs());
-  print(height.ceil());
-  print(weight.floor());
+  // print(age.isEven);
+  // print(absolutExample.abs());
+  // print(height.ceil());
+  // print(weight.floor());
 
-  // List
-  // otomatis akan tersimpan sebagai list tipe data dynamic (bisa menyimpan semua jenis tipe data)
-  List favoriteFood = ["fried rice", "chicken noodle", "chocolate"];
-  var mataKuliah = ["bahasa inggris", "matematika", "basis data"];
-  // bisa ditetapkan tipe datanya dengan penulisan <tipe> setelah penulisan List
-  List<int> nilaiUjian = [100, 90, 80, 65];
+  // // List
+  // // otomatis akan tersimpan sebagai list tipe data dynamic (bisa menyimpan semua jenis tipe data)
+  // List favoriteFood = ["fried rice", "chicken noodle", "chocolate"];
+  // var mataKuliah = ["bahasa inggris", "matematika", "basis data"];
+  // // bisa ditetapkan tipe datanya dengan penulisan <tipe> setelah penulisan List
+  // List<int> nilaiUjian = [100, 90, 80, 65];
 
-  print("makanan favorit $favoriteFood");
-  print("daftar nilai ujian: $nilaiUjian");
-  print("nilai ujian kamu: ${nilaiUjian[0]}");
+  // print("makanan favorit $favoriteFood");
+  // print("daftar nilai ujian: $nilaiUjian");
+  // print("nilai ujian kamu: ${nilaiUjian[0]}");
 
-  nilaiUjian.add(100);
-  print("nilai ujian terbaru ${nilaiUjian}");
+  // nilaiUjian.add(100);
+  // print("nilai ujian terbaru ${nilaiUjian}");
 
-  // Map
-  // bersifat key-value seperti objek dalam javascript
-  // map tidak perlu indexing karena sudah terdapat key
-  Map kendaraan = {"mobil": "Toyota", "motor": "Beat", "sepeda": "bmx"};
-  print("kendaraan: $kendaraan");
-  print("motor: ${kendaraan["motor"]}");
+  // // Map
+  // // bersifat key-value seperti objek dalam javascript
+  // // map tidak perlu indexing karena sudah terdapat key
+  // Map kendaraan = {"mobil": "Toyota", "motor": "Beat", "sepeda": "bmx"};
+  // print("kendaraan: $kendaraan");
+  // print("motor: ${kendaraan["motor"]}");
+
+  // ---
+  // final vs const
+  String name = "Asa Mitaka";
+  name = "Yoru";
+
+  // isi dari variabel nama masih bisa diubah
+  print(name);
+
+  // agar isi dari variabel tidak bisa diubah, variabel dibuat dengan keyword final atau const
+  // ketika menggunakan final, variabel bisa dideklarasikan terlebih dahulu sebagai abstraksi
+  final String strongestSocerer;
+  // setelah diberikan value, isi variabel tersebut tidak dapat diubah lagi
+  strongestSocerer = "Sukuna";
+  // strongestSocerer = "Satria Gojo"; // error
+  final name2 = "Denji";
+
+  // penggunaan constant wajib langsung memberikan value
+  const name3 = "Makima";
+
+  // name2 = "Pochita"; // error
+  // name3 = "Himeno"; // error
+
+  print(strongestSocerer);
 }
