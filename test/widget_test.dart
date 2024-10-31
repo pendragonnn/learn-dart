@@ -150,4 +150,18 @@ void main() {
   }
   */
 
+  // Function
+  // blok kode yang berisi perintah-perintah
+  int hasilPenjumlahan = penjumlahan(12, 12);
+  hasilPenjumlahan += 2;
+  print(hasilPenjumlahan);
+  pengurangan(25, 21);
+}
+
+int penjumlahan(int a, int b) {
+  return a + b;
+}
+
+void pengurangan(int a, int b) {
+  print(a - b);
 }
