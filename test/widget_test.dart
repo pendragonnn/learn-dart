@@ -257,7 +257,37 @@ void main() {
   // // foreach
   // motor.forEach((m) => (print(m)));
 
-  
+  // // Conditional Expression
+  // // if else
+  // if (true) {
+  //   // melakukan jika kondisi benar
+  //   print("execute this");
+  // } else {
+  //   // melakukan jika kondisi selain benar
+  //   print("execute here");
+  // }
+
+  // String nama = "Denji";
+  // if (nama == "Denji") {
+  //   print("Nama dia adalah $nama");
+  // } else if (nama == "Aki") {
+  //   print("Nama dia $nama, dia teman Denji");
+  // } else {
+  //   print("Aku tidak kenal dia");
+  // }
+
+  // // switch case
+  // switch (nama) {
+  //   case "Denji":
+  //     print("Nama dia adalah Denji");
+  //     break; // wajib di break
+  //   case "Aki":
+  //     print("Nama dia adalah Aki");
+  //     break;
+  //   default: // kondisi ketika case tidak ada yang cocok
+  //     print("Aku tidak kenal");
+  // }
+
 
 }
 
