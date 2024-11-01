@@ -157,63 +157,75 @@ void main() {
   // print(hasilPenjumlahan);
   // pengurangan(25, 21);
 
-  // Asynchronous
-  // pada bahasa Dart, terdapat 2 jenis pengeksekusian kode. kode akan dijalankan secara synchronous (sync)
-  // atau asynchronous (async)
+  // // Asynchronous
+  // // pada bahasa Dart, terdapat 2 jenis pengeksekusian kode. kode akan dijalankan secara synchronous (sync)
+  // // atau asynchronous (async)
 
-  // contoh synchronous
-  print("Contoh asynchronous");
-  print("A");
-  print("B");
-  print("C");
+  // // contoh synchronous
+  // print("Contoh asynchronous");
+  // print("A");
+  // print("B");
+  // print("C");
 
-  // contoh penggunaan asynchronous
-  void cetakB() {
-    Future(() {
-      print("B");
-    });
+  // // contoh penggunaan asynchronous
+  // void cetakB() {
+  //   Future(() {
+  //     print("B");
+  //   });
+  // }
+
+  // // asynchronous function with duration delay
+  // void cetakD() {
+  //   Future.delayed(Duration(seconds: 5), () {
+  //     print("D");
+  //   });
+
+  //   // ini langsung dicetak karena dianggap perintah dalam ffungsi biasa
+  //   print("berhasil cetak D");
+  // }
+
+  // // asynchronous function with await
+  // void cetakF() async {
+  //   await Future.delayed(Duration(seconds: 7), () {
+  //     print("F");
+  //   });
+
+  //   // print ini tidak akan dicetak sebelum await di atas diselesaikan
+  //   print("finally after 7 sec...");
+  // }
+
+  // // penggunaan then memerlukan keyword Future<tipe>
+  // Future<String> cetakG() async {
+  //   await Future.delayed(Duration(seconds: 10));
+  //   print("G");
+  //   print("lo masih mending 7 detik, lah gw");
+  //   return "mantap nilainya 100";
+
+  //   // untuk ditangkap catchError ketika error
+  //   // throw "Tidak Berhasil cetak G"
+  // }
+
+  // print("Contoh asynchronous");
+  // print("A");
+  // cetakB();
+  // print("C");
+  // cetakD();
+  // cetakF();
+  // cetakG()
+  //     .then((data) => print("udah jangan adu nasib, semuanya udah selesai kok, btw $data"))
+  //     .catchError((err) => print("ERROR NI"));
+
+  // Exception
+  // kejadian atau event yang terjadi saat eksekusi program dan mengganggu alur program. 
+  // exception dapat digunakan untuk mengatur alur program agar melakukan proses tertentu saat terjadi error
+  try {
+    int umur = int.parse("77b"); // huruf tidak bisa diubah ke bilangan
+    print(umur);
+  } on FormatException { // ketika terjadi format exception
+    print("Data yang diinput harus angka");
+  } catch (e) {
+    print("Error secara general"); // print error secara general
   }
-
-  // asynchronous function with duration delay
-  void cetakD() {
-    Future.delayed(Duration(seconds: 5), () {
-      print("D");
-    });
-
-    // ini langsung dicetak karena dianggap perintah dalam ffungsi biasa
-    print("berhasil cetak D");
-  }
-
-  // asynchronous function with await
-  void cetakF() async {
-    await Future.delayed(Duration(seconds: 7), () {
-      print("F");
-    });
-
-    // print ini tidak akan dicetak sebelum await di atas diselesaikan
-    print("finally after 7 sec...");
-  }
-
-  // penggunaan then memerlukan keyword Future<tipe>
-  Future<String> cetakG() async {
-    await Future.delayed(Duration(seconds: 10));
-    print("G");
-    print("lo masih mending 7 detik, lah gw");
-    return "mantap nilainya 100";
-
-    // untuk ditangkap catchError ketika error
-    // throw "Tidak Berhasil cetak G"
-  }
-
-  print("Contoh asynchronous");
-  print("A");
-  cetakB();
-  print("C");
-  cetakD();
-  cetakF();
-  cetakG()
-      .then((data) => print("udah jangan adu nasib, semuanya udah selesai kok, btw $data"))
-      .catchError((err) => print("ERROR NI"));
 }
 
 // int penjumlahan(int a, int b) {
