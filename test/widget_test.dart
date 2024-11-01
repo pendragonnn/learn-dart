@@ -288,7 +288,51 @@ void main() {
   //     print("Aku tidak kenal");
   // }
 
+  // Collection
+  // adalah sebuah variabel yang bisa memuat lebih dari 1 data
+  // List
+  List<String> motor = ["Nmax", "Mio J", "Jupyter MX"];
+  print(motor[2]);
+  motor.forEach((m) => (print(m)));
 
+  int i = 0;
+  for (String item in motor) {
+    print("motor ke ${i + 1} : $item");
+    i++;
+  }
+
+  // Set
+  // menggunakan curly braces
+  // tidak ada index tetapi menggunakan elementAt
+  // kita bisa mendapatkan irisan dan gabungan
+  Set<int> nilaiMatematika = <int>{8, 9, 7, 6, 10};
+  Set<int> nilaiFisika = <int>{8, 4, 3, 5, 10};
+  print(nilaiMatematika);
+  print(nilaiMatematika.union(nilaiFisika));
+  print(nilaiMatematika.intersection(nilaiFisika));
+  print(nilaiMatematika.elementAt(2));
+
+  // Map
+  // identik dengan penggunaan key: value
+  Map nilai = {
+    "matematika": [8, 7, 5, 2, 10],
+    "fisika": [9, 8, 10, 5],
+  };
+
+  print(nilai);
+  print(nilai["matematika"]);
+  print(nilai["fisika"][0]);
+
+  // spread collection
+  List data1 = [100, 99, 98, 97];
+  print(data1);
+
+  // menambahkan data dalam list data1 anggota paling akhir pada copyData
+  List copyData = [...data1, 5];
+  print(copyData);
+  Set hobby = {"makan", "mancing", "tidur"};
+  Set hobbyUpdated = {...hobby, "mandi"};
+  print(hobbyUpdated);
 }
 
 // int penjumlahan(int a, int b) {
