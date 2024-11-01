@@ -215,17 +215,50 @@ void main() {
   //     .then((data) => print("udah jangan adu nasib, semuanya udah selesai kok, btw $data"))
   //     .catchError((err) => print("ERROR NI"));
 
-  // Exception
-  // kejadian atau event yang terjadi saat eksekusi program dan mengganggu alur program. 
-  // exception dapat digunakan untuk mengatur alur program agar melakukan proses tertentu saat terjadi error
-  try {
-    int umur = int.parse("77b"); // huruf tidak bisa diubah ke bilangan
-    print(umur);
-  } on FormatException { // ketika terjadi format exception
-    print("Data yang diinput harus angka");
-  } catch (e) {
-    print("Error secara general"); // print error secara general
-  }
+  // // Exception
+  // // kejadian atau event yang terjadi saat eksekusi program dan mengganggu alur program.
+  // // exception dapat digunakan untuk mengatur alur program agar melakukan proses tertentu saat terjadi error
+  // try {
+  //   int umur = int.parse("77b"); // huruf tidak bisa diubah ke bilangan
+  //   print(umur);
+  // } on FormatException { // ketika terjadi format exception
+  //   print("Data yang diinput harus angka");
+  // } catch (e) {
+  //   print("Error secara general"); // print error secara general
+  // }
+
+  // Loop
+  // // for loop
+  // for (int i = 1; i <= 10; i++) {
+  //   // 3 argumen: nilai awal, batasan perulangan, dan increment/decrement
+  //   print("ini perulangan ke $i");
+  // }
+  // for (int i = 10; i >= 1; i--) {
+  //   print("ini perulangan decrement ke $i");
+  // }
+
+  // // do while
+  // int i = 1;
+  // do {
+  //   print(i); // dicetak terlebih dahulu tanpa dicek
+  //   i++;
+  // } while (i <= 0);
+
+  // // looping list
+  // List<String> motor = ["Mio", "Nmax", "Jupyter MX"];
+  // for (int j = 0; j < motor.length; j++) {
+  //   print("motor: ${motor[j]}");
+  // }
+
+  // for(String m in motor) {
+  //   print(m);
+  // }
+
+  // // foreach
+  // motor.forEach((m) => (print(m)));
+
+  
+
 }
 
 // int penjumlahan(int a, int b) {
