@@ -1,10 +1,8 @@
 import 'Hewan.dart';
+import 'mixin/renang.dart';
 
-class Ikan extends Hewan {
-  int? jumlahKaki;
-  int? kecepatanBerenang;
-
-  Ikan({required this.jumlahKaki, this.kecepatanBerenang, required int berat})
+class Ikan extends Hewan with Renang {
+  Ikan({required int berat})
       : super(nama: "Ikan", kategori: "Pisces", berat: berat);
 
   // Burung (

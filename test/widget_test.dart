@@ -34,6 +34,7 @@
   - fungsi main diperlukan untuk pertama kali dijalankan
   - fungsi dengan tipe void tidak mengembalikan apapun
 */
+import 'Anjing.dart';
 import 'Burung.dart';
 import 'Ikan.dart';
 import 'Pakaian.dart';
@@ -451,21 +452,57 @@ void main() {
   // hewan3.makan = 4;
   // print("Sekarang ${hewan3.berat} KG");
 
-  // dengan inheritance
-  Kucing hewanKucing = Kucing(jumlahKaki: 3, kecepatanLari: 5, berat: 10);
+  // // dengan inheritance
+  // Kucing hewanKucing = Kucing(jumlahKaki: 3, kecepatanLari: 5, berat: 10);
+  // print("HEWAN 1 : ${hewanKucing.kategori} - ${hewanKucing.nama}");
+  // print("${hewanKucing.berat} KG");
+  // print("kecepatan berlari: ${hewanKucing.kecepatanLari} M/s");
+
+  // Ikan hewanIkan = Ikan(jumlahKaki: 0, kecepatanBerenang: 2, berat: 5);
+  // print("HEWAN 1 : ${hewanIkan.kategori} - ${hewanIkan.nama}");
+  // print("${hewanIkan.berat} KG");
+  // print("kecepatan berenang: ${hewanIkan.kecepatanBerenang} M/s");
+
+  // Burung hewanBurung = Burung(jumlahKaki: 2, berat: 3, kecepatanTerbang: 2);
+  // print("HEWAN 1 : ${hewanBurung.kategori} - ${hewanBurung.nama}");
+  // print("${hewanBurung.berat} KG");
+  // print("kecepatan terbang: ${hewanBurung.kecepatanTerbang} M/s");
+
+  // Mixin
+  // sebuah kelas yang dipergunakan untuk umum, penggunaannya dengan keyword with 
+  // tanpa mixin
+  // Anjing hewanAnjing = Anjing(jumlahKaki: 2, berat: 3, kecepatanLari: 2, kecepatanBerenang: 5);
+  // print("HEWAN 1 : ${hewanAnjing.kategori} - ${hewanAnjing.nama}");
+  // print("${hewanAnjing.berat} KG");
+  // print("kecepatan lari: ${hewanAnjing.kecepatanLari} M/s");
+  // print("kecepatan berenang: ${hewanAnjing.kecepatanBerenang} M/s");
+
+  // dengan mixin
+  Kucing hewanKucing = Kucing(jumlahKaki: 3, berat: 10);
+  hewanKucing.kecepatanLari = 10;
   print("HEWAN 1 : ${hewanKucing.kategori} - ${hewanKucing.nama}");
   print("${hewanKucing.berat} KG");
-  print("kecepatan berlari: ${hewanKucing.kecepatanLari} M/s");
+  print("kecepatan berlari: ${hewanKucing.lari} M/s");
 
-  Ikan hewanIkan = Ikan(jumlahKaki: 0, kecepatanBerenang: 2, berat: 5);
+  Ikan hewanIkan = Ikan(berat: 5);
+  hewanIkan.kecepatanBerenang = 3;
   print("HEWAN 1 : ${hewanIkan.kategori} - ${hewanIkan.nama}");
   print("${hewanIkan.berat} KG");
-  print("kecepatan berenang: ${hewanIkan.kecepatanBerenang} M/s");
+  print("kecepatan berenang: ${hewanIkan.renang} M/s");
 
-  Burung hewanBurung = Burung(jumlahKaki: 2, berat: 3, kecepatanTerbang: 2);
+  Burung hewanBurung = Burung(jumlahKaki: 2, berat: 3);
+  hewanBurung.kecepatanTerbang = 20;
   print("HEWAN 1 : ${hewanBurung.kategori} - ${hewanBurung.nama}");
   print("${hewanBurung.berat} KG");
-  print("kecepatan terbang: ${hewanBurung.kecepatanTerbang} M/s");
+  print("kecepatan terbang: ${hewanBurung.terbang} M/s");
+
+  Anjing hewanAnjing = Anjing(jumlahKaki: 2, berat: 3);
+  hewanAnjing.kecepatanLari = 10;
+  hewanAnjing.kecepatanBerenang = 10;
+  print("HEWAN 1 : ${hewanAnjing.kategori} - ${hewanAnjing.nama}");
+  print("${hewanAnjing.berat} KG");
+  print("kecepatan lari: ${hewanAnjing.lari} M/s");
+  print("kecepatan berenang: ${hewanAnjing.renang} M/s");
 }
 
 
