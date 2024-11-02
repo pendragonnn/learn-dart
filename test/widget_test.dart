@@ -34,7 +34,11 @@
   - fungsi main diperlukan untuk pertama kali dijalankan
   - fungsi dengan tipe void tidak mengembalikan apapun
 */
+import 'Burung.dart';
+import 'Ikan.dart';
 import 'Pakaian.dart';
+import 'Hewan.dart';
+import 'kucing.dart';
 
 void main() {
   // print("NAMA SAYA JOKO");
@@ -374,37 +378,94 @@ void main() {
   // Tanpa OOP project kita akan cenderung sulit dimengerti seperti toko baju di pasar yang mencampur
   // dagangan mereka dalam 1 keranjang besar, kita sulit memisahkan barang yang ingin kita beli.
 
-  // Class
-  // var pakaian1 = Pakaian();
-  // pakaian1.jenis = "Baju";
-  // pakaian1.warna = "Biru";
-  // print("${pakaian1.jenis} berwarna ${pakaian1.warna}");
+  // // Class
+  // // var pakaian1 = Pakaian();
+  // // pakaian1.jenis = "Baju";
+  // // pakaian1.warna = "Biru";
+  // // print("${pakaian1.jenis} berwarna ${pakaian1.warna}");
 
-  // var pakaian2 = Pakaian();
-  // pakaian2.jenis = "Kemeja";
-  // pakaian2.warna = "Hitam";
-  // print("${pakaian2.jenis} berwarna ${pakaian2.warna}");
+  // // var pakaian2 = Pakaian();
+  // // pakaian2.jenis = "Kemeja";
+  // // pakaian2.warna = "Hitam";
+  // // print("${pakaian2.jenis} berwarna ${pakaian2.warna}");
 
-  // dengan constructor positional argument
-  // var pakaian3 = Pakaian("Jaket", "Hitam");
-  // print("${pakaian3.jenis} berwarna ${pakaian3.warna}");
+  // // dengan constructor positional argument
+  // // var pakaian3 = Pakaian("Jaket", "Hitam");
+  // // print("${pakaian3.jenis} berwarna ${pakaian3.warna}");
 
-  // constructor named argument
-  // var pakaian3 = Pakaian(jenisPakaian: "Jaket", warnaPakaian: "Hitam");
-  // print("${pakaian3.jenis} berwarna ${pakaian3.warna}");
+  // // constructor named argument
+  // // var pakaian3 = Pakaian(jenisPakaian: "Jaket", warnaPakaian: "Hitam");
+  // // print("${pakaian3.jenis} berwarna ${pakaian3.warna}");
 
-  // constructor direct
-  var pakaian4 = Pakaian(jenis: "Celana", warna: "Putih", ukuran: "34");
-  print(
-      "${pakaian4.jenis} berwarna ${pakaian4.warna} berukuran ${pakaian4.getUkuran}");
-  print("pakaian4 ganti ukuran");
+  // // constructor direct
+  // var pakaian4 = Pakaian(jenis: "Celana", warna: "Putih", ukuran: "34");
+  // print(
+  //     "${pakaian4.jenis} berwarna ${pakaian4.warna} berukuran ${pakaian4.getUkuran}");
+  // print("pakaian4 ganti ukuran");
 
-  // secara langsung (tidak diizinkan karena atribut bersifat private)
-  // pakaian4.ukuran = "32";
+  // // secara langsung (tidak diizinkan karena atribut bersifat private)
+  // // pakaian4.ukuran = "32";
 
-  // menggunakan method
-  pakaian4.setUkuran = "36";
-  print("${pakaian4.jenis} berwarna ${pakaian4.warna} berukuran ${pakaian4.getUkuran}");
+  // // menggunakan method
+  // pakaian4.setUkuran = "36";
+  // print("${pakaian4.jenis} berwarna ${pakaian4.warna} berukuran ${pakaian4.getUkuran}");
+
+  // inheritance
+  // tanpa konsep inheritance
+  // Hewan hewan1 =
+  //     Hewan(jumlahKaki: 4, nama: "Kucing", berat: 10, kategori: "mamalia", kecepatanLari: 2);
+  // print("HEWAN 1 : ${hewan1.kategori} - ${hewan1.nama}");
+  // print("${hewan1.berat} KG");
+  // print("${hewan1.kecepatanLari} m/s");
+  // print("${hewan1.jumlahKaki} kaki");
+
+  // print("makan");
+  // hewan1.makan = 4;
+  // print("Sekarang ${hewan1.berat} KG");
+
+  // print("====================");
+
+  // Hewan hewan2 =
+  //     Hewan(nama: "Ikan", berat: 2, kategori: "Pisces", kecepatanRenang: 2);
+  // print("HEWAN 1 : ${hewan2.kategori} - ${hewan2.nama}");
+  // print("${hewan2.berat} KG");
+  // print("${hewan2.kecepatanRenang} M/s");
+
+  // print("makan");
+  // hewan2.makan = 4;
+  // print("Sekarang ${hewan2.berat} KG");
+
+  // print("====================");
+
+  // Hewan hewan3 = Hewan(
+  //     nama: "Burung",
+  //     berat: 2,
+  //     kategori: "Aves",
+  //     kecepatanTerbang: 2,
+  //     jumlahKaki: 2);
+  // print("HEWAN 1 : ${hewan3.kategori} - ${hewan3.nama}");
+  // print("${hewan3.berat} KG");
+  // print("${hewan3.kecepatanTerbang} M/s");
+
+  // print("makan");
+  // hewan3.makan = 4;
+  // print("Sekarang ${hewan3.berat} KG");
+
+  // dengan inheritance
+  Kucing hewanKucing = Kucing(jumlahKaki: 3, kecepatanLari: 5, berat: 10);
+  print("HEWAN 1 : ${hewanKucing.kategori} - ${hewanKucing.nama}");
+  print("${hewanKucing.berat} KG");
+  print("kecepatan berlari: ${hewanKucing.kecepatanLari} M/s");
+
+  Ikan hewanIkan = Ikan(jumlahKaki: 0, kecepatanBerenang: 2, berat: 5);
+  print("HEWAN 1 : ${hewanIkan.kategori} - ${hewanIkan.nama}");
+  print("${hewanIkan.berat} KG");
+  print("kecepatan berenang: ${hewanIkan.kecepatanBerenang} M/s");
+
+  Burung hewanBurung = Burung(jumlahKaki: 2, berat: 3, kecepatanTerbang: 2);
+  print("HEWAN 1 : ${hewanBurung.kategori} - ${hewanBurung.nama}");
+  print("${hewanBurung.berat} KG");
+  print("kecepatan terbang: ${hewanBurung.kecepatanTerbang} M/s");
 }
 
 
