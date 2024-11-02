@@ -34,7 +34,7 @@
   - fungsi main diperlukan untuk pertama kali dijalankan
   - fungsi dengan tipe void tidak mengembalikan apapun
 */
-import 'dart:ffi';
+import 'Pakaian.dart';
 
 void main() {
   // print("NAMA SAYA JOKO");
@@ -334,40 +334,80 @@ void main() {
   // Set hobbyUpdated = {...hobby, "mandi"};
   // print(hobbyUpdated);
 
-  // Null Safety
-  // adalah sebuah fitur untuk mengetahui adanya error akibat null
-  // bisa diterapkan langsung dalam fungsi
-  String? getNama() {
-    // return "Makima";
-    return null;
-  }
+  // // Null Safety
+  // // adalah sebuah fitur untuk mengetahui adanya error akibat null
+  // // bisa diterapkan langsung dalam fungsi
+  // String? getNama() {
+  //   // return "Makima";
+  //   return null;
+  // }
 
-  // terdapat 3 jenis syntax baru yaitu penggunaan ?, !, dan late
-  String? nama;
-  String? goodName = getNama();
-  // variabel nama diperbolehkan null dengan menggunakan '?'
-  print(nama); // -> null
-  if (goodName?.length == null) {
-    print("Tidak ada data");
-  } else {
-    // tanda '!' berarti sudah dipastikan dengan benar bahwa data tidak null
-    print("$goodName terdiri dari ${goodName!.length} karakter");
-  }
+  // // terdapat 3 jenis syntax baru yaitu penggunaan ?, !, dan late
+  // String? nama;
+  // String? goodName = getNama();
+  // // variabel nama diperbolehkan null dengan menggunakan '?'
+  // print(nama); // -> null
+  // if (goodName?.length == null) {
+  //   print("Tidak ada data");
+  // } else {
+  //   // tanda '!' berarti sudah dipastikan dengan benar bahwa data tidak null
+  //   print("$goodName terdiri dari ${goodName!.length} karakter");
+  // }
 
-  // ?? dapat digunakan untuk handle null
-  print(goodName?.length ?? "TIDAK ADA DATA NAMA");
+  // // ?? dapat digunakan untuk handle null
+  // print(goodName?.length ?? "TIDAK ADA DATA NAMA");
 
-  void printBio(String bio) {
-    print(bio);
-  }
+  // void printBio(String bio) {
+  //   print(bio);
+  // }
 
-  // late
-  // fitur untuk memastikan bahwa ketika variabel dieksekusi, ia wajib ada datanya/telah diinisialisasi
-  late String bio;
-  bio = "sukamaju";
+  // // late
+  // // fitur untuk memastikan bahwa ketika variabel dieksekusi, ia wajib ada datanya/telah diinisialisasi
+  // late String bio;
+  // bio = "sukamaju";
 
-  printBio(bio);
+  // printBio(bio);
+
+  // Introduction Object Oriented Programming
+  // OOP merupakan sebauh paradigma pemrograman berorientasi object. hal ini bertujuan agar
+  // project kita lebih mudah untuk digunakan dan juga untuk dipelihara.
+  // Tanpa OOP project kita akan cenderung sulit dimengerti seperti toko baju di pasar yang mencampur
+  // dagangan mereka dalam 1 keranjang besar, kita sulit memisahkan barang yang ingin kita beli.
+
+  // Class
+  // var pakaian1 = Pakaian();
+  // pakaian1.jenis = "Baju";
+  // pakaian1.warna = "Biru";
+  // print("${pakaian1.jenis} berwarna ${pakaian1.warna}");
+
+  // var pakaian2 = Pakaian();
+  // pakaian2.jenis = "Kemeja";
+  // pakaian2.warna = "Hitam";
+  // print("${pakaian2.jenis} berwarna ${pakaian2.warna}");
+
+  // dengan constructor positional argument
+  // var pakaian3 = Pakaian("Jaket", "Hitam");
+  // print("${pakaian3.jenis} berwarna ${pakaian3.warna}");
+
+  // constructor named argument
+  // var pakaian3 = Pakaian(jenisPakaian: "Jaket", warnaPakaian: "Hitam");
+  // print("${pakaian3.jenis} berwarna ${pakaian3.warna}");
+
+  // constructor direct
+  var pakaian4 = Pakaian(jenis: "Celana", warna: "Putih", ukuran: "34");
+  print(
+      "${pakaian4.jenis} berwarna ${pakaian4.warna} berukuran ${pakaian4.getUkuran}");
+  print("pakaian4 ganti ukuran");
+
+  // secara langsung (tidak diizinkan karena atribut bersifat private)
+  // pakaian4.ukuran = "32";
+
+  // menggunakan method
+  pakaian4.setUkuran = "36";
+  print("${pakaian4.jenis} berwarna ${pakaian4.warna} berukuran ${pakaian4.getUkuran}");
 }
+
+
 
 // int penjumlahan(int a, int b) {
 //   return a + b;
