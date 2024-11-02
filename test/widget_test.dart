@@ -468,44 +468,81 @@ void main() {
   // print("${hewanBurung.berat} KG");
   // print("kecepatan terbang: ${hewanBurung.kecepatanTerbang} M/s");
 
-  // Mixin
-  // sebuah kelas yang dipergunakan untuk umum, penggunaannya dengan keyword with 
-  // tanpa mixin
-  // Anjing hewanAnjing = Anjing(jumlahKaki: 2, berat: 3, kecepatanLari: 2, kecepatanBerenang: 5);
+  // // Mixin
+  // // sebuah kelas yang dipergunakan untuk umum, penggunaannya dengan keyword with
+  // // tanpa mixin
+  // // Anjing hewanAnjing = Anjing(jumlahKaki: 2, berat: 3, kecepatanLari: 2, kecepatanBerenang: 5);
+  // // print("HEWAN 1 : ${hewanAnjing.kategori} - ${hewanAnjing.nama}");
+  // // print("${hewanAnjing.berat} KG");
+  // // print("kecepatan lari: ${hewanAnjing.kecepatanLari} M/s");
+  // // print("kecepatan berenang: ${hewanAnjing.kecepatanBerenang} M/s");
+
+  // // dengan mixin
+  // Kucing hewanKucing = Kucing(jumlahKaki: 3, berat: 10);
+  // hewanKucing.kecepatanLari = 10;
+  // print("HEWAN 1 : ${hewanKucing.kategori} - ${hewanKucing.nama}");
+  // print("${hewanKucing.berat} KG");
+  // print("kecepatan berlari: ${hewanKucing.lari} M/s");
+
+  // Ikan hewanIkan = Ikan(berat: 5);
+  // hewanIkan.kecepatanBerenang = 3;
+  // print("HEWAN 1 : ${hewanIkan.kategori} - ${hewanIkan.nama}");
+  // print("${hewanIkan.berat} KG");
+  // print("kecepatan berenang: ${hewanIkan.renang} M/s");
+
+  // Burung hewanBurung = Burung(jumlahKaki: 2, berat: 3);
+  // hewanBurung.kecepatanTerbang = 20;
+  // print("HEWAN 1 : ${hewanBurung.kategori} - ${hewanBurung.nama}");
+  // print("${hewanBurung.berat} KG");
+  // print("kecepatan terbang: ${hewanBurung.terbang} M/s");
+
+  // Anjing hewanAnjing = Anjing(jumlahKaki: 2, berat: 3);
+  // hewanAnjing.kecepatanLari = 10;
+  // hewanAnjing.kecepatanBerenang = 10;
   // print("HEWAN 1 : ${hewanAnjing.kategori} - ${hewanAnjing.nama}");
   // print("${hewanAnjing.berat} KG");
-  // print("kecepatan lari: ${hewanAnjing.kecepatanLari} M/s");
-  // print("kecepatan berenang: ${hewanAnjing.kecepatanBerenang} M/s");
+  // print("kecepatan lari: ${hewanAnjing.lari} M/s");
+  // print("kecepatan berenang: ${hewanAnjing.renang} M/s");
 
-  // dengan mixin
-  Kucing hewanKucing = Kucing(jumlahKaki: 3, berat: 10);
-  hewanKucing.kecepatanLari = 10;
-  print("HEWAN 1 : ${hewanKucing.kategori} - ${hewanKucing.nama}");
-  print("${hewanKucing.berat} KG");
-  print("kecepatan berlari: ${hewanKucing.lari} M/s");
+  // Enum
+  // bisa menggunakan banyak tipe data
 
-  Ikan hewanIkan = Ikan(berat: 5);
-  hewanIkan.kecepatanBerenang = 3;
-  print("HEWAN 1 : ${hewanIkan.kategori} - ${hewanIkan.nama}");
-  print("${hewanIkan.berat} KG");
-  print("kecepatan berenang: ${hewanIkan.renang} M/s");
+  // boolean enum manual
+  // bool isMale = true;
+  // if (isMale == true) {
+  //   print("DIA LAKI-LAKI");
+  // } else {
+  //   print("DIA PEREMPUAN");
+  // }
 
-  Burung hewanBurung = Burung(jumlahKaki: 2, berat: 3);
-  hewanBurung.kecepatanTerbang = 20;
-  print("HEWAN 1 : ${hewanBurung.kategori} - ${hewanBurung.nama}");
-  print("${hewanBurung.berat} KG");
-  print("kecepatan terbang: ${hewanBurung.terbang} M/s");
+  // integer enum manual
+  // int motor = 2;
 
-  Anjing hewanAnjing = Anjing(jumlahKaki: 2, berat: 3);
-  hewanAnjing.kecepatanLari = 10;
-  hewanAnjing.kecepatanBerenang = 10;
-  print("HEWAN 1 : ${hewanAnjing.kategori} - ${hewanAnjing.nama}");
-  print("${hewanAnjing.berat} KG");
-  print("kecepatan lari: ${hewanAnjing.lari} M/s");
-  print("kecepatan berenang: ${hewanAnjing.renang} M/s");
+  // if (motor == 1) {
+  //   print("NMAX");
+  // } else if (motor == 2) {
+  //   print("PCX");
+  // } else if (motor == 3) {
+  //   print("MIO");
+  // } else {
+  //   print("TIDAK DIKETAHUI");
+  // }
+
+  // using 'enum'
+  var motorKita = motor.nmax;
+
+  if (motorKita == motor.nmax) {
+    print("NMAX");
+  } else if (motorKita == motor.pcx) {
+    print("PCX");
+  } else if (motorKita == motor.mio) {
+    print("MIO");
+  } else {
+    print("TIDAK DIKETAHUI");
+  }
 }
 
-
+enum motor { nmax, jupyter, pcx, mio, vespa }
 
 // int penjumlahan(int a, int b) {
 //   return a + b;
